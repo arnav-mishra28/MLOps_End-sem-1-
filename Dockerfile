@@ -10,9 +10,9 @@ COPY requirements.txt .
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
+# Copy application code (copy .env* optionally if present)
 COPY main.py .
-COPY .env .
+COPY .env* .
 
 # Expose port 8000
 EXPOSE 8000
